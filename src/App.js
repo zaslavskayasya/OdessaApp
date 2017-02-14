@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import  MyMap from './Map'
+import GoogleMap from 'google-map-react';
 
-import SimpleMapPage from './GMap'
 
 class App extends Component {
   render() {
@@ -15,11 +16,12 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-          <SimpleMapPage />
-
+          < MyMap initialPosition={{lat: -34.397, lng: 150.644}} />
       </div>
     );
   }
 }
 
+
 export default App;
+
