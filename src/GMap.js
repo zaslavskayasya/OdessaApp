@@ -11,7 +11,7 @@ export default class SimpleMapPage extends React.Component {
             center: {lat: 59.938043, lng: 30.337157},
             zoom: 9,
             greatPlaceCoords: {lat: 59.724465, lng: 30.080121},
-            key: 'AIzaSyAc0iRgrOXhejzd_egRp8wDGM5H1re6psQ'
+            key: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAc0iRgrOXhejzd_egRp8wDGM5H1re6psQ&callback=initMap'
         }
     }
 
@@ -19,11 +19,12 @@ export default class SimpleMapPage extends React.Component {
         return (
             <GoogleMap
                 bootstrapURLKeys={{
-                    key:    'AIzaSyAc0iRgrOXhejzd_egRp8wDGM5H1re6psQ',
+                    key: 'AIzaSyAc0iRgrOXhejzd_egRp8wDGM5H1re6psQ',
 
                 }}
                 defaultCenter={this.state.center}
-                defaultZoom={this.state.zoom}>
+                defaultZoom={this.state.zoom}
+            className="mapWindow">
 
             </GoogleMap>
         );
